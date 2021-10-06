@@ -1,0 +1,21 @@
+<html>
+    <head>
+    <title>Przykład nr 1 </title>
+        <script language="JavaScript">
+            function WinOpen_Brdej(nazwa, x, y, window_name) {
+                window.open(nazwa, window_name,`toolbar=no,directories=no,menubar=no,height=280,width=160,top=${y},left=${x}`);
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="imie" style="font-size: 2cm;">Nikodem  Brdej</div>
+
+        <form>
+            <input type="button" name="przycisk" value="Nowa Strona" onclick="WinOpen_Brdej('obraz.html', 10, 10, '1')">
+            <input type="button" name="przycisk" value="Grafika 2" onclick="WinOpen_Brdej('obraz2.html', 2000, 10, '2')">
+            <input type="button" name="przycisk" value="Grafika 3" onclick="WinOpen_Brdej('obraz3.html', 10, 1000, '3')">
+            <input type="button" name="przycisk" value="Grafika 4" onclick="WinOpen_Brdej('obraz4.html', 2000, 1000, '4')">
+        </form>
+    </body>
+</html>

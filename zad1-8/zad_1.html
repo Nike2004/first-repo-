@@ -1,0 +1,54 @@
+<html>
+    <head>
+    <title>Nikodem Brdej </title>
+    <script language="JavaScript">
+        function WinOpen_Brdej() {
+            window.open("przyklad1a.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");
+        }
+
+        function show_confirm() {
+            output = document.getElementById("output");
+            if (confirm("Naciśnij klawisz"))
+                output.innerHTML = "Nacisnąłeś OK!";
+            else
+                output.innerHTML = "Nacisnąłeś cencel!";
+
+        }
+
+        function show_prompt() {
+            var name=prompt("Wpisz imię","Imię Nazwisko");
+            output = document.getElementById("output");
+            console.log(name);
+            if (name!="")
+                output.innerHTML = "Witaj " + name + "! what's up?";
+            else
+                output.innerHTML = "Wpisz coś!";
+        }
+
+        function sum() {
+            output = document.getElementById("output");
+
+            var liczba1=prompt("liczba1=","");
+            var liczba2=prompt("liczba2=","");
+            var suma;
+            var a=parseFloat(liczba1);
+            var b=parseFloat(liczba2);
+            suma=a+b;
+            output.innerHTML = "suma="+a+" + "+b+" = "+suma+"<br>";
+        }
+    </script>
+    <meta charset="UTF-8" />
+    </head>
+
+    <body>
+        <div id="imie" style="font-size: 2cm;">Nikodem Brdej</div>
+
+        <input type="button" name="przycisk" value="Przykład 1a" onclick="WinOpen_Dlugosz()">
+        <input type="button" onclick="alert('Siemka')" value="Pokaż Alert Box" /> 
+        <input type="button" onclick="show_confirm()" value="Pokaż confirm box" />
+        <input type="button" onclick="show_prompt()" value="Pokaż prompt box" />
+        <input type="button" onclick="sum()" value="Oblicz sume" />
+
+        <div id="output"></div>
+    </body>
+</html>

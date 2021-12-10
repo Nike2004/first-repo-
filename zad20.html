@@ -1,0 +1,57 @@
+<html> 
+<head> 
+<title>
+Wyliczenie V i Pc walca
+</title>
+ <script language="JavaScript">
+function Pow_brdej(a,b,h)
+    {
+        b_liczba=parseFloat(b)
+        a_liczba=parseFloat(a)
+        h_liczba=parseFloat(h)
+
+        Pow_brdej_wynik=((a_liczba+b_liczba)*h_liczba)/2
+        document.getElementsByName('pow')[0].value=Pow_brdej_wynik.toFixed(2); /* na dokument */
+        alert("Powierzchnia="+Pow_brdej_wynik.toFixed(2)+" cm^2"); /*do okna Alert */
+        pokaz1.innerHTML="Powierzchnia="+Pow_brdej_wynik.toFixed(2)+" cm^2"+"<br>";  /* do tabeli */
+    }
+    function Obw_brdej(a,b,h)    
+    {
+        a_liczba=parseFloat(a)
+        b_liczba=parseFloat(b)
+        h_liczba=parseFloat(h)
+        ramie_brdej=(a_liczba*a_liczba)+(b_liczba*b_liczba)
+        ramie1_brdej=Math.sqrt(ramie_brdej)
+        Obw_brdej_wynik=(2*ramie1_brdej)+a_liczba+b_liczba
+        document.getElementsByName('ob')[0].value=Obw_brdej_wynik.toFixed(2);
+        alert("Obwod="+Obw_brdej_wynik.toFixed(2)+" cm");
+        pokaz2.innerHTML="Obwod="+Obw_brdej_wynik.toFixed(2)+"cm";
+}
+ </script>
+</head> 
+<body> 
+obliczanie P i Ob 
+<br> <br>
+<form name="formularz" action="..." onsubmit="Pow_brdej(this.a.value,this.b.value,this.h.value), Obw_brdej(this.a.value,this.b.value,this.h.value);return false"> 
+    Podaj a=
+        <input size="6" name="a">
+    Podaj b=
+        <input size="6" name="b">
+    Podaj h=
+        <input size="6" name="h">
+    <br>
+    <br>
+    <input TYPE="submit" Value="oblicz" >
+    <br>
+    <br>
+    Pow=
+        <input size="6" name="pow">
+    Ob=
+        <input size="6" name="ob">
+</form>
+    <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+    </table>
+</body> 
+</html>

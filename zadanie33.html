@@ -1,0 +1,30 @@
+
+<html lang="pl">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    </head>
+  <body>
+    <script type="text/javascript">
+      var agent = navigator.userAgent.toLowerCase();
+      var nazwa = "nieznany";
+      if (agent.indexOf("firefox") != -1) {nazwa = "Firefox";}
+      if (agent.indexOf("Opera") != -1) {nazwa = "Opera";}
+      
+      
+       else if (agent.indexOf("konqueror") != -1) {nazwa = "Konqueror";}
+       else if (agent.indexOf("netscape") != -1) {nazwa = "Netscape Navigator";}
+       else if (agent.indexOf("msie") != -1) {nazwa = "Internet Explorer";}
+      document.write("Twoja przeglądarka to: " + nazwa);
+
+      document.write("<br>");
+
+      document.write("mam przeglądarkę= "+navigator.appName);
+      if((navigator.appName=="Firefox") && (parseInt(navigator.appVersion)>=3))
+      { document.write("<br> mam przeglądarkę="+navigator.appName);} 
+
+      else {document.write("<br> Masz niewłaściwą wersję przeglądarki!!!");}
+
+    </script>
+    </body>
+</html>

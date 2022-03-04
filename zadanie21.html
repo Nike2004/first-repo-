@@ -1,0 +1,48 @@
+<html>
+<head>
+ <script language="JavaScript">
+function drabina(d,x)
+{
+ d_liczba=parseFloat(d);
+ x_liczba=parseFloat(x);
+ D_wynik=Math.pow(((d**2)+(x**2)),(1/2));
+ document.getElementsByName('Drabina')[0].value=D_wynik.toFixed(2); 
+ alert("Drabina="+D_wynik.toFixed(2)+" m"); 
+ pokaz1.innerHTML="Drabina="+D_wynik.toFixed(2)+" m"+"<br>";  
+}
+function alfa(d,x)
+{
+ d_liczba=parseFloat(d);
+ x_liczba=parseFloat(x);
+ A_wynik=((Math.atan(d/x)*(180/3.14)));
+ document.getElementsByName('Alfa')[0].value=A_wynik.toFixed(2);
+ alert("Alfa="+A_wynik.toFixed(2)+" stopni");
+ pokaz2.innerHTML="Alfa="+A_wynik.toFixed(2)+" stopni";
+}
+ </script>
+</head>
+<body>
+Obliczanie odległości od drabiny i kąta
+<br> <br>
+<form name="formularz" action="..." onsubmit="drabina(this.bok1.value,this.bok2.value);
+alfa(this.bok1.value,this.bok2.value);return false">
+Podaj d=
+<input size="6" name="bok1">
+Podaj x=
+<input size="6" name="bok2">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Drabina=
+<input size="6" name="Drabina">
+Alfa=
+<input size="6" name="Alfa">
+</form>
+<table>
+<tr id="pokaz1"></tr>
+<tr id="pokaz2"></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html> 
+<head> 
+<title>
+ Zad22
+</title>
+ <script language="JavaScript">
+function wysokosc_len(odl,s)
+{
+ odl_len=parseFloat(odl)//podstawa
+ s_len=parseFloat(s)//przekatna
+ V_wynik=Math.sqrt(Math.pow(odl,2)-Math.pow(s,2))
+ document.getElementsByName('drabina')[0].value=V_wynik.toFixed(2); /* na dokument */
+ pokaz1.innerHTML="Drabina="+V_wynik.toFixed(2);  /* do tabeli */
+}
+function tagens_len(odl1,s1)
+{
+odl_len=parseFloat(odl1)//podstawa
+s_len=parseFloat(s1)//przekatna
+ //ctg
+ wynik=Math.atan2(odl1,s1).toFixed(1)
+ wynik_a=180*wynik
+ Pc_wynik=wynik_a/3,14
+ document.getElementsByName('alfa')[0].value=Pc_wynik.toFixed(2);;
+ pokaz2.innerHTML="Alfa="+Pc_wynik.toFixed(2);;
+}
+ </script>
+</head> 
+<body> 
+Obliczanie odległości od Artura i Dominika oraz kąta
+<br> <br>
+<form name="formularz" action="..." onsubmit="wysokosc_len(this.szerokosc.value,this.przekatna.value); 
+tagens_len(this.szerokosc.value,this.przekatna.value);return false"> 
+Odległość:
+<input size="6" name="szerokosc">
+Droga:
+<input size="6" name="przekatna">
+<br>
+<br>
+<input TYPE="submit" Value="oblicz" >
+<br>
+<br>
+Drabina
+<input size="6" name="drabina">
+Alfa
+<input size="6" name="alfa">
+</form>
+<table>
+<tr id="pokaz1"></tr>
+<tr id="pokaz2"></tr>
+</table>
+</body> 
+</html>

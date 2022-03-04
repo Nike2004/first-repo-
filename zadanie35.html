@@ -1,0 +1,27 @@
+<html>
+<!-- metatagi -->
+<head>
+<script type="text/javascript">
+function wyswietlDate(){
+ var Today = new Date();
+ var Month = (Today.getMonth()+1);
+ var Day = Today.getDate();
+ var Year = Today.getFullYear();
+ if(Year <= 99) Year += 1900
+ return Day + "-" + Month + "-" + Year;
+}
+</script>
+</head>
+
+<body>
+<script type="text/javascript">
+    document.write("Brdej Nikodem" + wyswietlDate());
+    document.write("Przeglądarka="+navigator.appName+"<br>");
+    document.write("Wersja przeglądarki="+navigator.appVersion+"<br>");
+    document.write("Wszystkie dane przeglądarki="+navigator.userAgent+"<br>");
+    document.write("System operacyjny="+navigator.platform+"<br>");
+    document.write("Przeglądarka pracuje w trybie="+navigator.onLine+"<br>");
+    document.write("Obsługa java="+navigator.javaEnabled()+"<br>"); 
+ </script>
+</body>
+</html>

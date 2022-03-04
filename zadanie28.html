@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function telefon(marka_k, ram_k, system_k) {
+        //początek konstruktora
+        this.marka = marka_k;
+        this.ram = ram_k;
+        this.system = system_k;
+      } //koniec konstruktora
+      telefon.prototype.wypisz = function () //definicja metody
+      {
+        alert(this.marka + " " + this.ram + " " + this.system);
+      };
+      var telefon1 = new telefon("samsung", "2", "android"); // nowy obiekt osoba1
+      var telefon2 = new telefon("huawei", "8", "android");
+      var telefon3 = new telefon("iphone", "4", "ios");
+
+
+     telefon1.wypisz();
+     telefon2.wypisz();
+     telefon3.wypisz();
+      document.write("dostęp do właściwości" + "<br>");
+      // poniżej dostęp do pól osoby1
+      
+      document.write( "Pierwszy telefon " + " " +telefon1.marka + " " +telefon1.ram + " " +telefon1.system+'<br>' );
+
+      document.write( "Pierwszy telefon " + " " +telefon2.marka + " " +telefon2.ram + " " +telefon2.system+'<br>');
+
+      document.write( "Pierwszy telefon " + " " +telefon3.marka + " " +telefon3.ram + " " +telefon3.system+'<br>' );
+
+    </script>
+  </head>
+  <body>
+    <br />
+    programowanie obiektowe
+  </body>
+</html>

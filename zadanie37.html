@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pl">
+ <head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>Moja strona WWW</title>
+</head>
+ <body>
+ <script type="text/javascript">
+        document.write("Podstawowe informacje o dokumencie:<br />");
+        document.write("Tryb kompatybilności: ");
+        document.write(document.compatMode + "<br />");
+        document.write("URL: " + document.URL + "<br />");
+        document.write("Liczba apletów: ");
+        document.write(document.applets.length + "<br />");
+        document.write("Liczba obrazów: ");
+        document.write(document.images.length + "<br />");
+        document.write("Liczba formularzy: ");
+        document.write(document.forms.length + "<br />");
+        document.write("Tytuł: " + document.title + "<br />");
+        document.write("Data ostatniej modyfikacji: ");
+        document.write(document.lastModified + "<br />");
+        document.write("<br /> lokalizacja: " + document.location + "<br />");
+        document.write("Ostatnia modyfikacja:: " + document.lastModified + "<br />");
+ </script>
+
+</body>
+
+</html>
